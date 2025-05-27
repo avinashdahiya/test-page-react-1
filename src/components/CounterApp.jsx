@@ -19,7 +19,7 @@ const CounterApp = () => {
         alt="Starbucks Logo"
         className="mx-auto mb-4 w-16 h-16"
       />
-      <h2 className="text-3xl font-bold mb-4 text-green-800">Coffee Counter</h2>
+      <h2 className="text-4xl font-bold mb-4 text-green-800">Coffee Counter</h2>
       <p className="text-gray-700 mb-6">Keep track of your favorite coffee shots ☕</p>
 
       <p className="text-6xl font-bold text-green-900 mb-6">{count}</p>

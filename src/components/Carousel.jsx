@@ -46,7 +46,7 @@ const Carousel = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center text-green-800 mb-2">
+      <h2 className="text-4xl font-bold text-center text-green-800 mb-2">
         Starbucks Featured Sips
       </h2>
       <p className="text-center text-gray-600 mb-8">
