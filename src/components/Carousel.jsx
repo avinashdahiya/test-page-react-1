@@ -1,8 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const Carousel = () => {
   const slides = [
@@ -54,14 +53,11 @@ const Carousel = () => {
       </p>
 
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Autoplay]}
         spaceBetween={24}
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 1000, disableOnInteraction: false }}
-        pagination={{
-          clickable: true,
-        }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -83,28 +79,6 @@ const Carousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Custom style to push dots lower and add spacing */}
-      <style>
-        {`
-          .swiper-pagination {
-            margin-top: 30px !important;
-            padding-bottom: 30px;
-          }
-          .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            margin: 0 6px;
-            background-color: #d1d5db;
-            opacity: 1;
-            transition: all 0.3s ease;
-          }
-          .swiper-pagination-bullet-active {
-            background-color: #16a34a;
-            transform: scale(1.2);
-          }
-        `}
-      </style>
     </div>
   );
 };
