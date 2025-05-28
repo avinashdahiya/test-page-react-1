@@ -12,43 +12,54 @@ const Home = () => {
           className="mx-auto mb-4 w-20 h-20 object-contain"
         />
 
-        {/* Heading (same text, slightly smaller) */}
+        {/* Heading */}
         <h1 className="text-3xl sm:text-4xl font-bold text-green-800 mb-3">
           Welcome to Starbucks Showcase
         </h1>
 
-        <p className="text-gray-600 text-base sm:text-lg mb-6">
+        {/* Intro Paragraph */}
+        <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">
           Explore our digital menu inspired by real Starbucks experiences. Choose from the sections below.
         </p>
+
+        {/* Added Starbucks Info */}
+        <p className="text-gray-600 text-base sm:text-lg mb-4 leading-relaxed">
+          Founded in Seattle in 1971, Starbucks has become a global coffeehouse brand, celebrated for quality coffee, sustainable sourcing, and creating a warm, inviting atmosphere.
+        </p>
+
+        {/* Quote */}
+        <blockquote className="text-green-800 italic text-base sm:text-lg font-semibold mb-6 border-l-4 border-green-600 pl-4 max-w-xl mx-auto">
+          “To inspire and nurture the human spirit – one person, one cup, and one neighborhood at a time.”
+        </blockquote>
 
         {/* Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             to="/profile"
-            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200"
+            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200 flex items-center justify-center gap-2"
           >
-            ☕ Profile Card (Founder)
+            <span className="text-xl">☕</span> Profile Card (Founder)
           </Link>
 
           <Link
             to="/products"
-            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200"
+            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200 flex items-center justify-center gap-2"
           >
-            🍰 Starbucks Product List
+            <span className="text-xl">🍰</span> Starbucks Product List
           </Link>
 
           <Link
             to="/carousel"
-            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200"
+            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200 flex items-center justify-center gap-2"
           >
-            📸 Product Carousel
+            <span className="text-xl">📸</span> Product Carousel
           </Link>
 
           <Link
             to="/counter"
-            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200"
+            className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-4 rounded-lg shadow hover:scale-105 transition duration-200 flex items-center justify-center gap-2"
           >
-            🔢 Coffee Counter
+            <span className="text-xl">🔢</span> Coffee Counter
           </Link>
         </div>
       </div>

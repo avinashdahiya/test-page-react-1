@@ -40,6 +40,10 @@ const ProductList = () => {
     },
   ];
 
+  const handleOrder = (productName) => {
+    alert(`Order placed for ${productName}!`);
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-4xl font-bold mb-10 text-center text-green-800">☕ Starbucks Menu</h2>
@@ -48,15 +52,24 @@ const ProductList = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out"
+            className="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col"
           >
             <h3 className="text-2xl font-semibold text-green-800 mb-2">{product.name}</h3>
             <p className="text-green-600 text-lg font-bold mb-4">{product.price}</p>
-            <ul className="text-gray-700 space-y-1 list-disc list-inside">
+            <ul className="text-gray-700 space-y-1 list-disc list-inside mb-6 flex-grow">
               {product.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
+
+            <div className="flex justify-center">
+              <button
+                onClick={() => handleOrder(product.name)}
+                className="w-32 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors duration-300"
+              >
+                Order
+              </button>
+            </div>
           </div>
         ))}
       </div>
